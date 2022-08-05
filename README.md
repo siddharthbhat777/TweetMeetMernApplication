@@ -1,0 +1,2 @@
+# TweetMeetMernApplication
+This is a web application based on MERN Stack where I have made a website with 4 section i.e. first is basic Login/Register page, Home page which is consisted of all the user’s and friend’s post and will let the user to post anything he/she wants, Profile page which includes user’s details and last one is Messaging Page where the user will be able to chat with their friends.
