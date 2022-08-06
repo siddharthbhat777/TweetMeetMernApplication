@@ -1,0 +1,91 @@
+.sidebar {
+  flex: 3;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  position: sticky;
+  top: 50px;
+  background-image: url('../../Images/sidebar.jpg');
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f671ff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(90, 20, 93);
+}
+
+.sidebarWrapper {
+  padding: 20px;
+  color: black;
+}
+
+.sidebarList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: black;
+}
+
+.sidebarListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.sidebarListItem:active{
+  background-image: linear-gradient(to right, rgba(190, 190, 190, 0.236) , rgba(255, 255, 255, 0.699));
+  border-radius: 70px;
+}
+
+.sidebarListItemText{
+  color: black;
+}
+
+.sidebarIcon {
+  margin-right: 15px;
+  color: black;
+}
+
+.sidebarButton {
+  width: 150px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  box-shadow: 2px 2px 4px gray;
+  cursor: pointer;
+}
+
+.sidebarButton:active{
+  box-shadow: 2px 2px 4px black;
+  transition-duration: 0.2s;
+  transform: translateX(0px) translateY(2px);
+}
+
+.sidebarHr {
+  margin: 20px 0;
+  color: black;
+}
+
+.sidebarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+

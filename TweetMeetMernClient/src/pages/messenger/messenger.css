@@ -1,0 +1,162 @@
+.messenger {
+  height: calc(100vh - 50px);
+  display: flex;
+  background-image: url('../../Images/background-image.jpg');
+  background-size: cover;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.chatMenu {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  flex: 3.5;
+}
+
+.chatMenuTitle,.chatBoxTitle,.chatOnlineTitle{
+  text-shadow: 1px 1px 2px black;
+}
+
+.chatMenuTitle{
+  align-content: center;
+  margin-left: 150px;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+.chatMenuInput {
+  width: 378px;
+  padding: 10px 0;
+  padding-left: 20px;
+  margin-left: 12px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+
+.chatBox {
+  margin-top: 50px;
+  flex: 5.5;
+  margin-bottom: 42px;
+  margin-right: 20px;
+}
+
+.chatBoxTitle{
+  align-content: center;
+  margin-left: 270px;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+.chatBoxWrapper {
+  height: 100%;
+  border-radius: 40px;
+  display: flex;
+  background-image: url('../../Images/chat-web-msg.jpg');
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.chatBoxTop {
+  height: 98%;
+  overflow-y: scroll;
+  margin: 20px;
+}
+
+.chatBoxBottom {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.chatMessageInput {
+  width: 85%;
+  height: 40px;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border: 2px solid black;
+  margin-left: 10px;
+}
+
+.chatSubmitButton {
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  margin-left: 15px;
+}
+
+.chatSubmitButton:hover{
+  color: rgb(82, 82, 82);
+}
+
+.chatOnline {
+  flex: 3;
+}
+
+.chatOnlineWrapper {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  height: 85%;
+  border-radius: 40px;
+  background-image: url('../../Images/chat-web-online.jpg');
+}
+
+.chatOnlineTitle{
+  align-content: center;
+  margin-left: 45px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.chatMenuWrapper{
+  height: 98%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-image: url('../../Images/chat-web-chats.jpg');
+  border-radius: 40px;
+}
+
+.noConversationText {
+  position: absolute;
+  top: 10%;
+  font-size: 50px;
+  color: rgb(224, 220, 220);
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .chatMenu {
+    flex: 1;
+  }
+
+  .chatMenuInput {
+    display: none;
+  }
+
+  .chatBox{
+    flex: 10;
+  }
+
+  .chatOnline{
+    flex: 1px;
+  }
+}

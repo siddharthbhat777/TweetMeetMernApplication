@@ -1,0 +1,157 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: url('../../Images/background-image.jpg');
+  background-size: 1920px 1080px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.loginWrapper {
+  width: 70%;
+  height: 70%;
+  display: flex;
+}
+
+.loginLeft,
+.loginRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginLogo {
+  font-size: 50px;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.loginDesc {
+  font-size: 24px;
+}
+
+.loginBox {
+  height: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loginInput {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+
+input::placeholder {
+  color: rgb(53, 53, 53);
+}
+
+input:focus::placeholder {
+  color: gray;
+}
+
+.loginInput:focus {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 18px;
+  padding-left: 20px;
+  border: 2px solid black;
+}
+
+.loginInput:focus {
+  outline: none;
+}
+
+.loginButton {
+  height: 50px;
+  width: 70%;
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.loginButton:active {
+  box-shadow: 2px 2px 4px black;
+  transition-duration: 0.2s;
+  transform: translateX(0px) translateY(2px);
+}
+
+.loginButton:hover {
+  background-image: url('../../Images/sidebar.jpg');
+  background-size: cover;
+  color: black;
+}
+
+.loginForgot {
+  text-align: center;
+  color: black;
+}
+
+.loginLeft {
+  margin-left: -100px;
+}
+
+.loginRight {
+  margin-left: 200px;
+  margin-right: -100px;
+}
+
+.loginRegisterButton {
+  width: 60%;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid black;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.loginRegisterButton:active {
+  box-shadow: 2px 2px 4px black;
+  transition-duration: 0.2s;
+  transform: translateX(0px) translateY(2px);
+}
+
+.loginRegisterButton:hover {
+  background-color: black;
+  color: white;
+}
