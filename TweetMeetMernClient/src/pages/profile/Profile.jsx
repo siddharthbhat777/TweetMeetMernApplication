@@ -6,19 +6,21 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
+import { BorderAllRounded, BorderLeftRounded, Edit } from '@material-ui/icons';
 
 export default function Profile() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const [user, setUser] = useState({});
   const username = useParams().username;
+  const [file, setFile] = useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(`/users?username=${username}`);
-      setUser(res.data);
+      setUser(res.data || file);
     };
     fetchUser();
-  }, [username]);
+  }, [username, file]);
 
   return (
     <>
@@ -37,15 +39,28 @@ export default function Profile() {
                 }
                 alt=""
               />
-              <img
-                className="profileUserImg noselect"
-                src={
-                  user.profilePicture
+              <div>
+                <img
+                id="profImg"
+                  className="profileUserImg noselect"
+                  src={file ? URL.createObjectURL(file) : 
+                     user.profilePicture
                     ? PF + user.profilePicture
                     : PF + "person/noAvatar.png"
-                }
-                alt=""
-              />
+                  }
+                  alt=""
+                />
+                <label htmlFor="fileInput">
+                  <Edit className="editProfileImg" style={{height: "15px", width: "15px", marginLeft: "525px"}} />
+                </label>
+                
+                <input
+                  type="file"
+                  id="fileInput"
+                  style={{ display: "none" }}
+                  onChange={(e) => setFile(e.target.files[0])}
+                />
+              </div>
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName noselect">{user.username}</h4>
