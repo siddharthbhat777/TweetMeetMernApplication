@@ -6,7 +6,7 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
-import { BorderAllRounded, BorderLeftRounded, Edit } from '@material-ui/icons';
+import { Edit } from '@material-ui/icons';
 
 export default function Profile() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
